@@ -14,11 +14,13 @@ public class Application {
 
         List<Coordinate> coordinates = parseCoordinates(input);
         if (coordinates.size() == 2) {
-            double calculateDistance = coordinates.get(0).calculateDistance(coordinates.get(1));
+            LineCalculator lineCalculator = new LineCalculator();
+            double calculateDistance = lineCalculator.calculate(coordinates);
             System.out.println("두 점 사이의 거리는 " + calculateDistance);
         }
         if (coordinates.size() == 4) {
-            int calculateDistance = coordinates.get(0).calculateArea(coordinates);
+            RectangleCalculator rectangleCalculator = new RectangleCalculator();
+            int calculateDistance = (int) rectangleCalculator.calculate(coordinates);
             System.out.println("사각형 넓이는 " + calculateDistance);
         }
     }

@@ -27,14 +27,4 @@ class CoordinateTest {
         assertThat(coordinate1.calculateDistance(coordinate2))
                 .isEqualTo(6.403124, offset(0.00009));
     }
-
-    @Test
-    void 네_좌표_넓이_계산() {
-        Coordinate coordinate1 = new Coordinate(10, 10);
-        Coordinate coordinate2 = new Coordinate(22, 10);
-        Coordinate coordinate3 = new Coordinate(22, 18);
-        Coordinate coordinate4 = new Coordinate(10, 18);
-        assertThat(coordinate1.calculateArea(Arrays.asList(coordinate1, coordinate2, coordinate3 ,coordinate4)))
-                .isEqualTo(96);
-    }
 }
