@@ -3,9 +3,17 @@ package coordinate;
 import java.util.List;
 
 public class LineCalculator implements Calculator {
+    private final Coordinate point1;
+    private final Coordinate point2;
+
+    public LineCalculator(List<Coordinate> coordinates) {
+        point1 = coordinates.get(0);
+        point2 = coordinates.get(1);
+    }
+
     @Override
-    public double calculate(List<Coordinate> coordinates) {
-        return Math.sqrt(Math.pow(coordinates.get(0).x - coordinates.get(1).x, 2)
-                + Math.pow(coordinates.get(0).y - coordinates.get(1).y, 2));
+    public double calculate() {
+        return Math.sqrt(Math.pow(point1.getX() - point2.getX(), 2)
+                + Math.pow(point1.getY() - point2.getY(), 2));
     }
 }

@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class RectangleCalculatorTest {
     @Test
@@ -14,8 +13,8 @@ class RectangleCalculatorTest {
         Coordinate coordinate2 = new Coordinate(22, 10);
         Coordinate coordinate3 = new Coordinate(22, 18);
         Coordinate coordinate4 = new Coordinate(10, 18);
-        RectangleCalculator rectangleCalculator = new RectangleCalculator();
-        assertThat(rectangleCalculator.calculate(Arrays.asList(coordinate1, coordinate2, coordinate3 ,coordinate4)))
+        RectangleCalculator rectangleCalculator = new RectangleCalculator(Arrays.asList(coordinate1, coordinate2, coordinate3 ,coordinate4));
+        assertThat(rectangleCalculator.calculate())
                 .isEqualTo(96);
     }
 }

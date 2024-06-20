@@ -14,7 +14,7 @@ public class Application {
 
         List<Coordinate> coordinates = parseCoordinates(input);
         Calculator calculator = CalculatorFactory.getCalculator(coordinates);
-        double result = calculator.calculate(coordinates);
+        double result = calculator.calculate();
         System.out.println("result = " + result);
     }
 
