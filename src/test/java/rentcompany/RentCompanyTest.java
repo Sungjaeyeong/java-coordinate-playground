@@ -1,3 +1,4 @@
+package rentcompany;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -16,11 +17,11 @@ public class RentCompanyTest {
 
         String report = company.generateReport();
         assertThat(report).isEqualTo(
-                "Sonata : 15리터" + NEWLINE +
-                        "K5 : 20리터" + NEWLINE +
-                        "Sonata : 12리터" + NEWLINE +
-                        "Avante : 20리터" + NEWLINE +
-                        "K5 : 30리터" + NEWLINE
+                "one.Sonata : 15리터" + NEWLINE +
+                        "one.K5 : 20리터" + NEWLINE +
+                        "one.Sonata : 12리터" + NEWLINE +
+                        "one.Avante : 20리터" + NEWLINE +
+                        "one.K5 : 30리터" + NEWLINE
         );
     }
 }

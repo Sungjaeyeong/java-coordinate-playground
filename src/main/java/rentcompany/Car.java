@@ -1,3 +1,5 @@
+package rentcompany;
+
 public abstract class Car {
     int distance;
     int efficiency;
