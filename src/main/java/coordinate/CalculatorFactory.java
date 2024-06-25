@@ -10,6 +10,9 @@ public class CalculatorFactory {
         if (coordinates.isRectangle()) {
             return new RectangleCalculator(coordinates);
         }
-        return null;
+        if (coordinates.isTrangle()) {
+            return new TriangleCalculator(coordinates);
+        }
+        throw new IllegalArgumentException("적용할 수 있는 계산기가 없습니다.");
     }
 }

@@ -24,6 +24,10 @@ public class Coordinates {
         return coordinates.size() == 4;
     }
 
+    public boolean isTrangle() {
+        return coordinates.size() == 3;
+    }
+
     public static Coordinates createCoordinates(String input) {
         List<Coordinate> coordinates = new ArrayList<>();
         Pattern pattern = Pattern.compile("\\((\\d+),(\\d+)\\)");
@@ -37,4 +41,5 @@ public class Coordinates {
 
         return new Coordinates(coordinates);
     }
+
 }
