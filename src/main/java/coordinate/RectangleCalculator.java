@@ -8,11 +8,11 @@ public class RectangleCalculator implements Calculator {
     private final Coordinate point3;
     private final Coordinate point4;
 
-    public RectangleCalculator(List<Coordinate> coordinates) {
-        point1 = coordinates.get(0);
-        point2 = coordinates.get(1);
-        point3 = coordinates.get(2);
-        point4 = coordinates.get(3);
+    public RectangleCalculator(Coordinates coordinates) {
+        point1 = coordinates.getPoint(0);
+        point2 = coordinates.getPoint(1);
+        point3 = coordinates.getPoint(2);
+        point4 = coordinates.getPoint(3);
     }
 
     @Override
