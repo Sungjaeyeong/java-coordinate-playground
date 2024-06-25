@@ -16,16 +16,8 @@ public class Coordinates {
         return coordinates.get(index);
     }
 
-    public boolean isLine() {
-        return coordinates.size() == 2;
-    }
-
-    public boolean isRectangle() {
-        return coordinates.size() == 4;
-    }
-
-    public boolean isTrangle() {
-        return coordinates.size() == 3;
+    public boolean equalsSize(int length) {
+        return coordinates.size() == length;
     }
 
     public static Coordinates createCoordinates(String input) {

@@ -11,7 +11,8 @@ public class Application {
         String input = scanner.nextLine();
 
         Coordinates coordinates = createCoordinates(input);
-        Calculator calculator = CalculatorFactory.getCalculator(coordinates);
+        Figure figure = FigureFactory.getInstance(coordinates);
+        Calculator calculator = (Calculator) figure;
         double result = calculator.calculate();
         System.out.println("result = " + result);
     }
